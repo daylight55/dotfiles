@@ -1,0 +1,163 @@
+{
+    "diffEditor.renderSideBySide": false, // Git の差分を行内に表示
+    "editor.colorDecorators": false, // カラーデコレーターを非表示
+    "editor.formatOnPaste": true, // ペースト時に自動でフォーマット
+    "editor.formatOnSave": true, // ファイル保存時に自動でフォーマット
+    "editor.formatOnType": true, // 入力した行を自動でフォーマット
+    "editor.minimap.renderCharacters": false, // ミニマップの表示文字をブロックに変更
+    "editor.minimap.showSlider": "always", // 表示領域をミニマップで常にハイライト
+    "editor.multiCursorModifier": "ctrlCmd", // マウスでの複数選択時の修飾キーを変更
+    "editor.renderControlCharacters": true, // 制御文字を表示
+    "editor.renderLineHighlight": "all", // 選択行を行番号含めすべてハイライト
+    "editor.renderWhitespace": "all", // 半角スペースを常に表示
+    "editor.snippetSuggestions": "top", // Emmet などのスニペット候補を優先して表示
+    "editor.tabSize": 2, // タブのサイズ変更
+    "editor.insertSpaces": true,
+    "editor.wordWrap": "on", // エディターの幅で折り返し
+    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingQuotes": "always",
+    "emmet.showSuggestionsAsSnippets": true, // Emmet の候補を表示
+    "emmet.triggerExpansionOnTab": true, // TAB キーで Emmet を展開できるようにする
+    "emmet.variables": { // Emmet で展開される HTML の言語を変更
+        "lang": "ja"
+    },
+    "explorer.confirmDelete": false, // ファイル削除時の確認を表示しない
+    "files.associations": { // ファイルと言語の関連付けを変更
+        ".*lintrc": "json"
+    },
+    "files.exclude": { // エクスプローラーから非表示にするファイル
+        "**/*.map": true,
+        "**/node_modules": true
+    },
+    "files.insertFinalNewline": true, // ファイルの保存時に末尾を改行
+    "files.trimFinalNewlines": true, // ファイルの保存時に最終行以降をトリミング
+    "files.trimTrailingWhitespace": true, // ファイルの保存時に行末の空白をトリミング
+    "[markdown]": {
+        "files.trimTrailingWhitespace": false // Markdown のファイルは行末の空白をトリミングしない
+    },
+    "html.format.contentUnformatted": "pre, code, textarea, title, h1, h2, h3, h4, h5, h6, p", // タグ内の記述はフォーマットしない
+    "html.format.extraLiners": "", // head, body, /html タグの前に改行を入れない
+    "html.format.unformatted": "wbr", // フレージング・コンテンツ（旧インライン要素のようなタグ）はフォーマットしない
+    "html.format.wrapLineLength": 0, // 行の文字数制限を無くし自動で改行させない
+    "html.format.wrapAttributes": "force-aligned",
+    // "html.format.wrapAttributes": "force-expand-multiline",
+    "search.exclude": { // 検索対象外にするファイル設定（ files.exclude のファイルも含む）
+        "**/tmp": true
+    },
+    "files.eol": "\n", // 改行コードは「LF」
+    "python.linting.enabled": true, // 文法チェックを行う
+    "python.linting.pylintEnabled": false, // pylint は使わない
+    "python.linting.pycodestyleEnabled": true, // pep8を利用
+    // "python.linting.flake8Enabled": true, // 文法チェックにflake8 を使う
+    "python.linting.flake8Args": [ // flake8 の設定
+        "--ignore=E111, E114, E402, E501"
+    ],
+    "python.linting.pycodestyleArgs": [ // pep8 の設定
+        "--ignore=E111, E114, E402, E501"
+    ],
+    "python.formatting.provider": "autopep8", // 自動整形に autopep8 を使う
+    "python.formatting.autopep8Args": [ // autopep8 の設定
+        "--indent-size=2",
+        "--ignore=E402,E501"
+    ],
+    "python.pythonPath": "/Users/apple/.pyenv/shims/python",
+    "python.venvFolders": [
+        "venv",
+        "envs",
+        ".pyenv",
+        ".direnv"
+    ],
+    "[python]": {
+        "editor.tabSize": 2, // インデントレベルは「2」
+        "editor.formatOnSave": true, // 保存時に自動整形を行う
+        "editor.formatOnPaste": false, // ペースト時に自動整形を行わない
+        "editor.formatOnType": false, // 入力後に自動整形を行わない
+    },
+    "window.openFoldersInNewWindow": "on", // 新規ワークスペースを別ウインドウで開く
+    "window.title": "${activeEditorMedium}${separator}${rootName}", // ウインドウ上部に表示する文字列の設定
+    "workbench.editor.labelFormat": "short", // タブに表示する文字列の設定
+    "workbench.editor.tabSizing": "shrink", // タブの表示設定
+    "workbench.startupEditor": "none",
+    "terminal.integrated.shell.linux": "/usr/bin/bash",
+    "window.zoomLevel": -1, // Welcome Page を表示しない
+    "workbench.editor.enablePreview": false,
+    // Goの設定
+    "go.formatTool": "goimports",
+    "go.useLanguageServer": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "typescript.validate.enable": false,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    "go.languageServerExperimentalFeatures": {
+        "format": false, // trueの場合、言語サーバーはgofmtを使用してファイルをフォーマットする　※当時はオフにしないと、1行1列目に戻ってしまってました
+        "autoComplete": true, // trueの場合、言語サーバーが提供する補完結果を表示する
+        "rename": true, // trueの場合、適切な名前変更機能が有効化される
+        "goToDefinition": true, // trueの場合、関数定義へのジャンプ機能を有効化する
+        "hover": true, // trueの場合、マウスを関数の上にかざすと定義表示がされるようになる
+        "signatureHelp": true, // trueの場合、関数のヘルプやパラメータのヒントを表示するようになる
+        "goToTypeDefinition": true, // trueの場合、型定義へのジャンプを有効化する
+        "documentSymbols": true, // trueの場合、ドキュメントシンボル表示、アウトライン表示、パンくずリスト表示を有効化する
+        "workspaceSymbols": true, // trueの場合、ワークスペースにあるシンボルジャンプを有効化する
+        "findReferences": true, // trueの場合、検索参照機能を有効化する
+        "diagnostics": true, // trueの場合、`go vet` を相当の機能を提供し、`buildOnSave`　`vetOnSave` を無視する
+        "documentLink": true, // trueの場合、importされているパッケージに対するドキュメントリンクが直接踏めるようになる
+        "goToImplementation": true, // ※ソースコード上に存在するだけでドキュメントがない
+        "incrementalSync": true, // trueの場合、差分（増分）ドキュメント更新が有効化される　※デフォルトfalseな上に使われてない?
+    },
+    "extensions.ignoreRecommendations": false,
+    "scm.autoReveal": false,
+    "eslint.enable": true,
+    "eslint.run": "onType",
+    "vetur.format.defaultFormatter.js": "prettier-eslint",
+    "vetur.format.defaultFormatter.css": "prettier",
+    "vetur.format.defaultFormatter.less": "prettier",
+    "vetur.format.defaultFormatter.postcss": "prettier",
+    "vetur.format.defaultFormatter.scss": "prettier",
+    "vetur.format.defaultFormatter.stylus": "stylus-supremacy",
+    "vetur.format.defaultFormatter.ts": "prettier",
+    "vetur.validation.style": true,
+    "vetur.validation.template": true,
+    // "vetur.format.defaultFormatter.html": "prettier",
+    // "vetur.format.defaultFormatter.html": "prettyhtml",
+    "vetur.format.defaultFormatterOptions": {
+        "prettier": {
+            "semi": true,
+            "singleQuote": true,
+            "trailingComma": "es5",
+            "arrowParens": "always"
+        },
+        "prettyhtml": {
+            "wrapAttributes": true
+        }
+    },
+    // "vetur.format.html.wrap_attributes":"force-expand-multiline",
+    "prettier.bracketSpacing": true,
+    "prettier.singleQuote": true,
+    "prettier.semi": false,
+    "prettier.tabWidth": 2,
+    "prettier.useTabs": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "auto-close-tag.enableAutoCloseTag": true,
+    "auto-close-tag.enableAutoCloseSelfClosingTag": true,
+    // Defines whether an open brace is put onto a new line for control blocks or not.
+    // "javascript.format.placeOpenBraceOnNewLineForControlBlocks": true,
+    // Defines whether an open brace is put onto a new line for functions or not.
+    // "javascript.format.placeOpenBraceOnNewLineForFunctions": true,
+    // "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
+    // "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
+    "[javascript]": {
+        // "editor.defaultFormatter": "remimarsal.prettier-now",
+        "editor.tabSize": 2,
+    },
+    "[vue]": {
+        // "editor.defaultFormatter": "remimarsal.prettier-now"
+    },
+    "tabnine.experimentalAutoImports": true
+    // "go.languageServerFlags": [
+    //     "-rpc.trace", // LSPの内容をダンプしつつ実行する
+    //     "serve", // LS起動
+    //     "--debug=localhost:6060", // このアドレスにデバッグ情報を表示する
+    // ]
+}
